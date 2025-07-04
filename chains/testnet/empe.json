@@ -1,13 +1,19 @@
 {
-  "chain_name": "empe",
-  "status": "live",
-  "network_type": "testnet",
-  "pretty_name": "EMPE Testnet",
-  "chain_id": "empe-testnet",
-  "bech32_prefix": "empe",
-  "rpc": [],
-  "api": [
-    "https://lcd-testnet.empe.io"
-  ],
-  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/empe/images/empe.png"
+    "chain_name": "empeiria-testnet",
+    "api": ["https://empeiria-testnet-api.itrocket.net"],
+    "rpc": ["https://empeiria-testnet-rpc.itrocket.net"],
+    "coingecko": "empeiria",
+    "snapshot_provider": "",
+    "sdk_version": "0.47.15", 
+    "coin_type": "60",
+    "min_tx_fee": "1000",
+    "addr_prefix": "empe",
+    "logo": "https://raw.githubusercontent.com/irhamtaufik3/images/refs/heads/main/empeiria.jpg",
+    "assets": [{
+        "base": "uempe",
+        "symbol": "EMPE",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": ""
+    }]
 }
