@@ -3,20 +3,9 @@
   "status": "live",
   "network_type": "testnet",
   "pretty_name": "EMPE Testnet",
-  "chain_id": "empe-testnet-1",
+  "chain_id": "empe-testnet",
   "bech32_prefix": "empe",
-  "daemon_name": "emped",
-  "node_home": "$HOME/.empe",
-  "api": [],
   "rpc": [],
-  "grpc": [],
-  "currencies": [
-    {
-      "base": "uempe",
-      "symbol": "EMPE",
-      "exponent": 6,
-      "logo": ""
-    }
-  ]
+  "api": ["https://lcd-testnet.empe.io"],
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/empe/images/empe.png"
 }
-
