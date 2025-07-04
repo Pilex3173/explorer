@@ -1,0 +1,13 @@
+{
+  "chain_name": "empe",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "EMPE Testnet",
+  "chain_id": "empe-testnet",
+  "bech32_prefix": "empe",
+  "rpc": [],
+  "api": [
+    "https://lcd-testnet.empe.io"
+  ],
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/empe/images/empe.png"
+}
