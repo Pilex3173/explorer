@@ -1,0 +1,13 @@
+{
+  "chain_name": "lumera",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "Lumera Testnet",
+  "chain_id": "lumera-testnet",
+  "bech32_prefix": "lumera",
+  "rpc": [],
+  "api": [
+    "https://api-t.lumera.nodestake.org"
+  ],
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/lumera/images/lumera.png"
+}
