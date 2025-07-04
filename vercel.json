@@ -4,7 +4,7 @@
   "public": true,
   "builds": [
     {
-      "src": "dist/**",
+      "src": "dist/**/*",
       "use": "@vercel/static"
     }
   ],
@@ -23,6 +23,24 @@
       "destination": "/index.html"
     }
   ],
+  "env": {
+    "VITE_API_URL": "https://api-t.lumera.nodestake.org",
+    "VITE_CHAIN_ID": "lumera-testnet"
+  },
+  "domains": [
+    "explore.pilex.web.id"
+  ],
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    }
+  ]
 }
