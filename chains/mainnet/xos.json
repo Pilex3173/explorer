@@ -1,0 +1,13 @@
+{
+  "chain_name": "xos",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "XOS Testnet",
+  "chain_id": "xos-testnet",
+  "bech32_prefix": "xos",
+  "rpc": [],
+  "api": [
+    "https://api-t.xos.nodestake.org"
+  ],
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/xos/images/xos.png"
+}
