@@ -1,15 +1,21 @@
 {
+  "chain_name": "empe",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "EMPE Testnet",
   "chain_id": "empe-testnet-1",
-  "chain_name": "EMPE Testnet",
-  "lcd": "https://lcd.testnet.empe.io",
-  "rpc": "https://rpc.testnet.empe.io",
   "bech32_prefix": "empe",
-  "coin_type": "118",
+  "daemon_name": "emped",
+  "node_home": "$HOME/.empe",
+  "api": [],
+  "rpc": [],
+  "grpc": [],
   "currencies": [
     {
-      "coinDenom": "EMPE",
-      "coinMinimalDenom": "uempe",
-      "coinDecimals": 6
+      "base": "uempe",
+      "symbol": "EMPE",
+      "exponent": 6,
+      "logo": ""
     }
   ]
 }

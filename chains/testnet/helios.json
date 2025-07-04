@@ -1,15 +1,21 @@
 {
+  "chain_name": "helios",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "Helios Testnet",
   "chain_id": "helios-testnet-1",
-  "chain_name": "Helios Testnet",
-  "lcd": "https://lcd.testnet.helios.io",
-  "rpc": "https://rpc.testnet.helios.io",
   "bech32_prefix": "hel",
-  "coin_type": "118",
+  "daemon_name": "heliosd",
+  "node_home": "$HOME/.helios",
+  "api": [],
+  "rpc": [],
+  "grpc": [],
   "currencies": [
     {
-      "coinDenom": "HEL",
-      "coinMinimalDenom": "uhel",
-      "coinDecimals": 6
+      "base": "uhel",
+      "symbol": "HEL",
+      "exponent": 6,
+      "logo": ""
     }
   ]
 }

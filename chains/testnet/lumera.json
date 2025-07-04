@@ -1,15 +1,31 @@
 {
+  "chain_name": "lumera",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "Lumera Testnet",
   "chain_id": "lumera-testnet-1",
-  "chain_name": "Lumera Testnet",
-  "lcd": "https://lumera-testnet.api.kjnodes.com",
-  "rpc": "https://lumera-testnet.rpc.kjnodes.com",
   "bech32_prefix": "lum",
-  "coin_type": "118",
+  "daemon_name": "lumerad",
+  "node_home": "$HOME/.lumera",
+  "api": [
+    {
+      "address": "https://lumera-testnet.api.kjnodes.com",
+      "provider": "kjnodes"
+    }
+  ],
+  "rpc": [
+    {
+      "address": "https://lumera-testnet.rpc.kjnodes.com",
+      "provider": "kjnodes"
+    }
+  ],
+  "grpc": [],
   "currencies": [
     {
-      "coinDenom": "LUM",
-      "coinMinimalDenom": "ulum",
-      "coinDecimals": 6
+      "base": "ulum",
+      "symbol": "LUM",
+      "exponent": 6,
+      "logo": ""
     }
   ]
 }

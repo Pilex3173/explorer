@@ -1,15 +1,26 @@
 {
-  "chain_id": "xos-testnet-1267",
-  "chain_name": "XOS Testnet",
-  "lcd": "https://testnet-rpc.x.ink",  // gunakan RPC sebagai LCD sekaligus
-  "rpc": "https://testnet-rpc.x.ink",
+  "chain_name": "xos",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "XOS Testnet",
+  "chain_id": "xos-testnet-1",
   "bech32_prefix": "xos",
-  "coin_type": "60",
+  "daemon_name": "xosd",
+  "node_home": "$HOME/.xos",
+  "api": [],
+  "rpc": [
+    {
+      "address": "https://testnet-rpc.x.ink",
+      "provider": "xos"
+    }
+  ],
+  "grpc": [],
   "currencies": [
     {
-      "coinDenom": "XOS",
-      "coinMinimalDenom": "uxos",
-      "coinDecimals": 18
+      "base": "uxos",
+      "symbol": "XOS",
+      "exponent": 18,
+      "logo": ""
     }
   ]
 }
