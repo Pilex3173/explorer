@@ -3,30 +3,9 @@
   "status": "live",
   "network_type": "testnet",
   "pretty_name": "Lumera Testnet",
-  "chain_id": "lumera-testnet-1",
-  "bech32_prefix": "lum",
-  "daemon_name": "lumerad",
-  "node_home": "$HOME/.lumera",
-  "api": [
-    {
-      "address": "https://lumera-testnet.api.kjnodes.com",
-      "provider": "kjnodes"
-    }
-  ],
-  "rpc": [
-    {
-      "address": "https://lumera-testnet.rpc.kjnodes.com",
-      "provider": "kjnodes"
-    }
-  ],
-  "grpc": [],
-  "currencies": [
-    {
-      "base": "ulum",
-      "symbol": "LUM",
-      "exponent": 6,
-      "logo": ""
-    }
-  ]
+  "chain_id": "lumera-testnet",
+  "bech32_prefix": "lumera",
+  "rpc": [],
+  "api": ["https://api-t.lumera.nodestake.org"],
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/lumera/images/lumera.png"
 }
-
