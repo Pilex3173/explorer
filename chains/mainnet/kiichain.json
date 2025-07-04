@@ -1,0 +1,13 @@
+{
+  "chain_name": "kiichain",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "Kiichain Testnet",
+  "chain_id": "kiitestnet-1",
+  "bech32_prefix": "ki",
+  "rpc": [],
+  "api": [
+    "https://lcd.uno.sentry.testnet.v3.kiivalidator.com"
+  ],
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/ki/images/ki.png"
+}
