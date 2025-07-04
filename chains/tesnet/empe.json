@@ -1,0 +1,22 @@
+{
+  "chain_name": "empe",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "EMPE Testnet",
+  "chain_id": "empe-testnet-1",
+  "bech32_prefix": "empe",
+  "daemon_name": "emped",
+  "node_home": "$HOME/.empe",
+  "api": [],
+  "rpc": [],
+  "grpc": [],
+  "currencies": [
+    {
+      "base": "uempe",
+      "symbol": "EMPE",
+      "exponent": 6,
+      "logo": ""
+    }
+  ]
+}
+
