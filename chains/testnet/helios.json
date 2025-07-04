@@ -4,19 +4,23 @@
   "network_type": "testnet",
   "pretty_name": "Helios Testnet",
   "chain_id": "helios-testnet-1",
-  "bech32_prefix": "hel",
+  "addr_prefix": "hel",
   "daemon_name": "heliosd",
   "node_home": "$HOME/.helios",
   "api": [],
-  "rpc": [],
+  "rpc": [
+    { "provider": "Helios Team", "address": "https://rpc.testnet.helios.io" }
+  ],
   "grpc": [],
-  "currencies": [
+  "assets": [
     {
       "base": "uhel",
       "symbol": "HEL",
-      "exponent": 6,
+      "exponent": "6",
+      "coingecko_id": "",
       "logo": ""
     }
-  ]
+  ],
+  "theme_color": "#BA68C8"
 }
 

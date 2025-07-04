@@ -4,19 +4,23 @@
   "network_type": "testnet",
   "pretty_name": "EMPE Testnet",
   "chain_id": "empe-testnet-1",
-  "bech32_prefix": "empe",
+  "addr_prefix": "empe",
   "daemon_name": "emped",
   "node_home": "$HOME/.empe",
   "api": [],
-  "rpc": [],
+  "rpc": [
+    { "provider": "EMPE", "address": "https://rpc.testnet.empe.io" }
+  ],
   "grpc": [],
-  "currencies": [
+  "assets": [
     {
       "base": "uempe",
       "symbol": "EMPE",
-      "exponent": 6,
+      "exponent": "6",
+      "coingecko_id": "",
       "logo": ""
     }
-  ]
+  ],
+  "theme_color": "#4DB6AC"
 }
 

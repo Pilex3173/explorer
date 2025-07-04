@@ -3,25 +3,24 @@
   "status": "live",
   "network_type": "testnet",
   "pretty_name": "XOS Testnet",
-  "chain_id": "xos-testnet-1",
-  "bech32_prefix": "xos",
+  "chain_id": "xos-testnet-1267",
+  "addr_prefix": "xos",
   "daemon_name": "xosd",
   "node_home": "$HOME/.xos",
   "api": [],
   "rpc": [
-    {
-      "address": "https://testnet-rpc.x.ink",
-      "provider": "xos"
-    }
+    { "provider": "XOS Team", "address": "https://testnet-rpc.x.ink" }
   ],
   "grpc": [],
-  "currencies": [
+  "assets": [
     {
       "base": "uxos",
       "symbol": "XOS",
-      "exponent": 18,
+      "exponent": "18",
+      "coingecko_id": "",
       "logo": ""
     }
-  ]
+  ],
+  "theme_color": "#F06292"
 }
 
