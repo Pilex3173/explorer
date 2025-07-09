@@ -6,8 +6,6 @@
   "chain_id": "xos-testnet",
   "bech32_prefix": "xos",
   "rpc": [],
-  "api": [
-    "https://api-t.xos.nodestake.org"
-  ],
+  "api": ["https://api-t.xos.nodestake.org"],
   "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/xos/images/xos.png"
 }
