@@ -6,7 +6,7 @@
   "apis": {
     "rest": [
       {
-        "address": "https://lcd-testnet.empe.io",
+        "address": "https://empeiria-testnet-api.cryptonode.id",
         "provider": "empe.io"
       }
     ]
