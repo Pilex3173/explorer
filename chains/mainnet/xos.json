@@ -1,0 +1,15 @@
+{
+  "chain_name": "xos",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "XOS Testnet",
+  "chain_id": "xos-testnet-1",
+  "bech32_prefix": "xos",
+  "rpc": [
+    "https://api-xos-testnet.maouam.xyz"
+  ],
+  "api": [],
+  "grpc": [],
+  "evm_rpc": [],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/xos.jpg"
+}
