@@ -1,4 +1,5 @@
-chain_name": "kiichain",
+{
+  "chain_name": "kiichain",
   "status": "live",
   "network_type": "testnet",
   "pretty_name": "Kiichain Testnet",
