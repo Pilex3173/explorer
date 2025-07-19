@@ -1,6 +1,7 @@
 {
   "chain_name": "kiichain",
   "status": "live",
+  "api": ["https://api.kiichain.com"]
   "network_type": "testnet",
   "pretty_name": "Kiichain Testnet",
   "chain_id": "kiitestnet-1",
