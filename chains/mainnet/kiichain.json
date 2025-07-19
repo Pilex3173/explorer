@@ -1,0 +1,25 @@
+{
+  "chain_name": "kiichain",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "Kiichain Testnet",
+  "chain_id": "kiitestnet-1",
+  "bech32_prefix": "kii",
+  "rpc": [
+    "https://rpc.uno.sentry.testnet.v3.kiivalidator.com/",
+    "https://rpc.dos.sentry.testnet.v3.kiivalidator.com/"
+  ],
+  "api": [
+    "https://lcd.uno.sentry.testnet.v3.kiivalidator.com/",
+    "https://lcd.dos.sentry.testnet.v3.kiivalidator.com/"
+  ],
+  "grpc": [
+    "grpc.uno.sentry.testnet.v3.kiivalidator.com:443",
+    "grpc.dos.sentry.testnet.v3.kiivalidator.com:443"
+  ],
+  "evm_rpc": [
+    "https://json-rpc.uno.sentry.testnet.v3.kiivalidator.com/",
+    "https://json-rpc.dos.sentry.testnet.v3.kiivalidator.com/"
+  ],
+  "logo": "https://raw.githubusercontent.com/KiiChain/kiichain/239012d2d19a662ddf141f46a05e81aac86ce5ce/assets/kii.png"
+}
