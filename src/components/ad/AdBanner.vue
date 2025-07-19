@@ -1,17 +1,28 @@
 <script lang="ts" setup>
 import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-const route = useRoute();
 
+// Cek hostname hanya jika berjalan di browser
 const aa = computed(() => {
-  const hostname = location.hostname;
-  if (hostname === 'testnet.ping.pub') {
-    return '2396360';
-  } else if (hostname === 'ping.pub') {
-    return '2395639';
-  } else {
-    return '2396360';
-  }
+  if (typeof window === 'undefined') return '2396360'; // fallback saat SSR
+
+  const hostname = window.location.hostname;
+
+  // Tentukan ID berdasarkan domain
+  switch (hostname) {
+    case 'ping.pub':
+      return '2395639';
+    case 'testnet.ping.pub':
+      return '2396360';
+    default:
+      return '2396360';
+  }
 });
 </script>
-<template></template>
+
+<template>
+  <!-- Gunakan nilai aa di sini jika diperlukan -->
+  <div>
+    ID: {{ aa }}
+  </div>
+</template>
+
