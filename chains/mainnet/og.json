@@ -1,0 +1,15 @@
+{
+  "chain_name": "og",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "OG Testnet",
+  "chain_id": "og-testnet-1",
+  "bech32_prefix": "og",
+  "rpc": [
+    "https://og-testnet-api.itrocket.net"
+  ],
+  "api": [],
+  "grpc": [],
+  "evm_rpc": [],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/0g.jpg"
+}
