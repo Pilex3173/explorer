@@ -6,10 +6,11 @@
   "chain_id": "lumera-testnet-1",
   "bech32_prefix": "lum",
   "rpc": [
-    "https://lumera-testnet-api.polkachu.com"
+    "https://rpc.lumera-t.nodevism.com",     // official
+    "https://lumera-testnet.rpc.kjnodes.com" // alternative
   ],
-  "api": [],
-  "grpc": [],
-  "evm_rpc": [],
+  "api": [
+    "https://api.lumera-t.nodevism.com"
+  ],
   "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumera.png"
 }
