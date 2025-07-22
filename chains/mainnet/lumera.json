@@ -1,0 +1,15 @@
+{
+  "chain_name": "lumera",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "Lumera Testnet",
+  "chain_id": "lumera-testnet-1",
+  "bech32_prefix": "lum",
+  "rpc": [
+    "https://lumera-testnet-api.polkachu.com"
+  ],
+  "api": [],
+  "grpc": [],
+  "evm_rpc": [],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumera.png"
+}
