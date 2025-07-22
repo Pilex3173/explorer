@@ -6,10 +6,9 @@
   "chain_id": "xos-testnet-1",
   "bech32_prefix": "xos",
   "rpc": [
-    "https://api-xos-testnet.maouam.xyz"
+    "https://testnet-rpc.x.ink",
+    "https://testnet-rpc.xoscan.io"
   ],
   "api": [],
-  "grpc": [],
-  "evm_rpc": [],
   "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/xos.jpg"
 }
