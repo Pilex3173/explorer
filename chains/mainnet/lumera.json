@@ -1,3 +1,4 @@
+
 {
   "chain_name": "lumera",
   "status": "live",
@@ -6,8 +7,8 @@
   "chain_id": "lumera-testnet-1",
   "bech32_prefix": "lum",
   "rpc": [
-    "https://rpc.lumera-t.nodevism.com",     // official
-    "https://lumera-testnet.rpc.kjnodes.com" // alternative
+    "https://rpc.lumera-t.nodevism.com",
+    "https://lumera-testnet.rpc.kjnodes.com"
   ],
   "api": [
     "https://api.lumera-t.nodevism.com"
