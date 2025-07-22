@@ -1,17 +1,15 @@
-
 {
   "chain_name": "lumera",
   "status": "live",
   "network_type": "testnet",
   "pretty_name": "Lumera Testnet",
-  "chain_id": "lumera-testnet-1",
+  "chain_id": "lumera-testnet-2",
   "bech32_prefix": "lum",
   "rpc": [
-    "https://rpc.lumera-t.nodevism.com",
-    "https://lumera-testnet.rpc.kjnodes.com"
+    "https://rpc.testnet.lumera.io"
   ],
   "api": [
-    "https://api.lumera-t.nodevism.com"
+    "https://lcd.testnet.lumera.io"
   ],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumera.png"
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/lumera.png"
 }
