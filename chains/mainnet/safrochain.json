@@ -6,10 +6,12 @@
   "chain_id": "safrochain-testnet-1",
   "bech32_prefix": "safro",
   "rpc": [
-    "https://api-safrochain-testnet.maouam.xyz"
+    "https://rpc.testnet.safrochain.com",
+    "https://rpc.safrochain-t.nodevism.com"
   ],
-  "api": [],
-  "grpc": [],
-  "evm_rpc": [],
+  "api": [
+    "https://rest.testnet.safrochain.com",
+    "https://api.safrochain-t.nodevism.com"
+  ],
   "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/safrochain.png"
 }
