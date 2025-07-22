@@ -1,0 +1,15 @@
+{
+  "chain_name": "safrochain",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "Safrochain Testnet",
+  "chain_id": "safrochain-testnet-1",
+  "bech32_prefix": "safro",
+  "rpc": [
+    "https://api-safrochain-testnet.maouam.xyz"
+  ],
+  "api": [],
+  "grpc": [],
+  "evm_rpc": [],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/safrochain.png"
+}
