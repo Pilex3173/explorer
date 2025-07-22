@@ -6,8 +6,8 @@
   "chain_id": "empeiria-testnet-1",
   "bech32_prefix": "emp",
   "rpc": [
-    "https://rpc.empeiria-t.nodevism.com",           // primary
-    "https://empeiria-testnet-rpc.validator247.com"  // fallback
+    "https://rpc.empeiria-t.nodevism.com",           
+    "https://empeiria-testnet-rpc.validator247.com" 
   ],
   "api": [
     "https://api.empeiria-t.nodevism.com"
