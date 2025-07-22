@@ -1,0 +1,15 @@
+{
+  "chain_name": "empeiria",
+  "status": "live",
+  "network_type": "testnet",
+  "pretty_name": "Empeiria Testnet",
+  "chain_id": "empeiria-testnet-1",
+  "bech32_prefix": "emp",
+  "rpc": [
+    "https://empeiria-testnet-api.itrocket.net"
+  ],
+  "api": [],
+  "grpc": [],
+  "evm_rpc": [],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/empeiria.jpg"
+}
