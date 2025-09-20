@@ -1,3 +1,5 @@
+// src/stores/formatter.ts
+
 import { defineStore } from 'pinia';
 import { useBlockchain, useBankStore, useStakingStore, useDashboard } from '@/stores';
 import numeral from 'numeral';
@@ -34,6 +36,23 @@ dayjs.updateLocale('en', {
     yy: '%d years',
   },
 });
+
+// 🔥 Tambahan: auto import semua json di chains/mainnet
+const chainModules = import.meta.glob('@/chains/mainnet/*.json', { eager: true });
+
+// gabungkan semua assets jadi 1 array
+const localAssets: any[] = [];
+for (const path in chainModules) {
+  const mod: any = chainModules[path];
+  if (mod?.currencies) {
+    localAssets.push(
+      ...mod.currencies.map((c: any) => ({
+        ...c,
+        chain_name: mod.chain_name,
+      }))
+    );
+  }
+}
 
 export const useFormatter = defineStore('formatter', {
   state: () => {
@@ -125,17 +144,15 @@ export const useFormatter = defineStore('formatter', {
     tokenAmountNumber(token?: Coin) {
       if (!token || !token.denom) return 0;
 
-      // find the symbol
       const symbol = this.dashboard.coingecko[token.denom]?.symbol || token.denom;
-      // convert denomination to symbol
-      const exponent = this.dashboard.coingecko[symbol?.toLowerCase()]?.exponent || this.specialDenom(token.denom);
-      // caculate amount of symbol
+      const exponent =
+        this.dashboard.coingecko[symbol?.toLowerCase()]?.exponent ||
+        this.specialDenom(token.denom);
       const amount = Number(token.amount) / 10 ** exponent;
       return amount;
     },
     tokenValueNumber(token?: Coin) {
       if (!token || !token.denom) return 0;
-
       const amount = this.tokenAmountNumber(token);
       const value = amount * this.price(token.denom);
       return value;
@@ -147,50 +164,49 @@ export const useFormatter = defineStore('formatter', {
       return this.formatToken(token, true, '0,0.[00]');
     },
 
+    // 🔥 Update: cek denom di localAssets dulu baru dashboard
     findGlobalAssetConfig(denom: string) {
+      const conf = localAssets.find(
+        (a) => a.coin_minimal_denom === denom || a.coin_denom === denom
+      );
+      if (conf) return conf;
+
       const chains = Object.values(this.dashboard.chains);
       for (let i = 0; i < chains.length; i++) {
         const assets = chains[i].assets;
         const conf = assets.find((a) => a.base === denom);
-        if (conf) {
-          return conf;
-        }
+        if (conf) return conf;
       }
       return undefined;
     },
+
     exponentForDenom(denom: string) {
       const asset: Asset | undefined = this.findGlobalAssetConfig(denom);
       let exponent = 0;
-      if (asset) {
-        // find the max exponent for display
+      if (asset && asset.denom_units) {
         asset.denom_units.forEach((x) => {
           if (x.exponent >= exponent) {
             exponent = x.exponent;
           }
         });
       }
-
       return exponent;
     },
     tokenDisplayDenom(denom?: string) {
       if (denom) {
         let asset: Asset | undefined;
-        if (denom && denom.startsWith('ibc/')) {
+        if (denom.startsWith('ibc/')) {
           const ibcDenom = denom.replace('ibc/', '');
           asset = this.ibcMetadata[ibcDenom];
           if (!asset) {
-            // update ibc metadata if not exits in local cache
             this.fetchDenomMetadata(ibcDenom);
-          } else {
-            console.log('ibc metadata', asset);
           }
         } else {
           asset = this.findGlobalAssetConfig(denom);
         }
 
-        if (asset) {
+        if (asset && asset.denom_units) {
           let unit = { exponent: 0, denom: '' };
-          // find the max exponent for display
           asset.denom_units.forEach((x) => {
             if (x.exponent >= unit.exponent) {
               unit = x;
@@ -209,8 +225,7 @@ export const useFormatter = defineStore('formatter', {
         let conf =
           mode === 'local'
             ? this.blockchain.current?.assets?.find(
-                // @ts-ignore
-                (x) => x.base === token.denom || x.base.denom === token.denom
+                (x: any) => x.base === token.denom || x.base.denom === token.denom
               )
             : this.findGlobalAssetConfig(token.denom);
 
@@ -221,10 +236,9 @@ export const useFormatter = defineStore('formatter', {
           }
         }
 
-        if (conf) {
+        if (conf && conf.denom_units) {
           let unit = { exponent: 0, denom: '' };
-          // find the max exponent for display
-          conf.denom_units.forEach((x) => {
+          conf.denom_units.forEach((x: any) => {
             if (x.exponent >= unit.exponent) {
               unit = x;
             }
@@ -237,7 +251,12 @@ export const useFormatter = defineStore('formatter', {
       }
       return 0;
     },
-    formatToken(token?: { denom: string; amount: string }, withDenom = true, fmt = '0,0.[0]', mode = 'local'): string {
+    formatToken(
+      token?: { denom: string; amount: string },
+      withDenom = true,
+      fmt = '0,0.[0]',
+      mode = 'local'
+    ): string {
       if (token && token.amount && token?.denom) {
         let amount = Number(token.amount);
         let denom = token.denom;
@@ -245,8 +264,7 @@ export const useFormatter = defineStore('formatter', {
         let conf =
           mode === 'local'
             ? this.blockchain.current?.assets?.find(
-                // @ts-ignore
-                (x) => x.base === token.denom || x.base.denom === token.denom
+                (x: any) => x.base === token.denom || x.base.denom === token.denom
               )
             : this.findGlobalAssetConfig(token.denom);
 
@@ -257,10 +275,9 @@ export const useFormatter = defineStore('formatter', {
           }
         }
 
-        if (conf) {
+        if (conf && conf.denom_units) {
           let unit = { exponent: 0, denom: '' };
-          // find the max exponent for display
-          conf.denom_units.forEach((x) => {
+          conf.denom_units.forEach((x: any) => {
             if (x.exponent >= unit.exponent) {
               unit = x;
             }
@@ -295,12 +312,12 @@ export const useFormatter = defineStore('formatter', {
     },
     validator(address: string) {
       if (!address) return address;
-
       const txt = toHex(fromBase64(address)).toUpperCase();
-      const validator = this.staking.validators.find((x) => consensusPubkeyToHexAddress(x.consensus_pubkey) === txt);
+      const validator = this.staking.validators.find(
+        (x) => consensusPubkeyToHexAddress(x.consensus_pubkey) === txt
+      );
       return validator?.description?.moniker;
     },
-    // find validator by operator address
     validatorFromBech32(address: string) {
       if (!address) return address;
       const validator = this.staking.validators.find((x) => x.operator_address === address);
