@@ -1,0 +1,15 @@
+{
+  "chain_name": "cnho",
+  "status": "live",
+  "network_type": "mainnet",
+  "pretty_name": "CNHO Stable",
+  "chain_id": "cnho_stables-1",
+  "bech32_prefix": "cnho",
+  "rpc": [
+    "https://api.cnho.io"
+  ],
+  "api": [
+    "https://api.cnho.io"
+  ],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/cnho.jpg"
+}
