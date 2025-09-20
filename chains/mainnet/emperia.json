@@ -1,5 +1,5 @@
 {
-    "chain_name": "empeiria",
+    "chain_name":"empeiria",
     "api": ["https://api.empeiria-t.nodevism.com","https://api.empeiria-t.nodevism.com"],
     "rpc": ["https://rpc.empeiria-t.nodevism.com","https://empeiria-testnet-rpc.validator247.com"],
     "coingecko": "empe",
