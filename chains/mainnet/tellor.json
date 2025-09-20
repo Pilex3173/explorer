@@ -2,17 +2,17 @@
     "chain_name": "tellor-mainnet",
     "api": ["https://mainnet.tellorlayer.com","https://api.tellor.nodestake.org"],
     "rpc": ["https://mainnet.tellorlayer.com","https://api.tellor.nodestake.org"],
-    "coingecko": "loya",
+    "coingecko": "TRB",
     "snapshot_provider": "",
     "sdk_version": "0.50.9", 
     "coin_type": "60",
     "min_tx_fee": "1000",
-    "addr_prefix": "loya",
+    "addr_prefix": "TRB",
     "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/tellor.png",
     "assets": [{
         "base": "uloya",
-        "symbol": "LOYA",
-        "exponent": "6",
+        "symbol": "TRB",
+        "exponent": "9",
         "coingecko_id": "unknown", 
         "logo": ""
     }]
