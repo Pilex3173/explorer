@@ -1,0 +1,17 @@
+{
+  "chain_name": "paxi",
+  "status": "live",
+  "network_type": "mainnet",
+  "pretty_name": "Paxi Mainnet",
+  "chain_id": "paxi-mainnet",
+  "bech32_prefix": "paxi",
+  "rpc": [
+    "https://api-paxi-m.maouam.xyz",
+    "https://rest.cosmos.directory/paxi"
+  ],
+  "api": [
+    "https://api-paxi-m.maouam.xyz",
+    "https://rest.cosmos.directory/paxi"
+  ],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/paxi.jpg"
+}
