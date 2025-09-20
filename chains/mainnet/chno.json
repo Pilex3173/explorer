@@ -8,7 +8,7 @@
     "coin_type": "60",
     "min_tx_fee": "1000",
     "addr_prefix": "chno",
-    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/cnho.jpg",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/cnho.png",
     "assets": [{
         "base": "uchno",
         "symbol": "CHNO",
