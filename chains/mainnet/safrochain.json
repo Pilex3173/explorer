@@ -1,31 +1,19 @@
-{
-  "chain_name": "safrochain",
-  "status": "live",
-  "network_type": "testnet",
-  "pretty_name": "Safrochain Testnet",
-  "chain_id": "safrochain-testnet-1",
-  "bech32_prefix": "safro",
-  "rpc": [
-    "https://rpc.testnet.safrochain.com",
-    "https://rpc.safrochain-t.nodevism.com"
-  ],
-  "api": [
-    "https://rest.testnet.safrochain.com",
-    "https://api.safrochain-t.nodevism.com"
-  ],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/safrochain.png",
- 
-  "stake_currency": {
-    "coin_denom": "SAF",
-    "coin_minimal_denom": "usaf",
-    "coin_decimals": 6
-  },
-  "currencies": [
-    {
-      "coin_denom": "SAF",
-      "coin_minimal_denom": "usaf",
-      "coin_decimals": 6
-    }
-  ]
+  {
+    "chain_name": "safrochain",
+    "api": ["https://rest.testnet.safrochain.com","https://api.safrochain-t.nodevism.com"],
+    "rpc": ["https://rpc.testnet.safrochain.com","https://rpc.safrochain-t.nodevism.com"],
+    "coingecko": "safro",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.9", 
+    "coin_type": "60",
+    "min_tx_fee": "1000",
+    "addr_prefix": "safro",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/safrochain.png",
+    "assets": [{
+        "base": "usafro",
+        "symbol": "SAF",
+        "exponent": "6",
+        "coingecko_id": "unknown", 
+        "logo": ""
+    }]
 }
-  
