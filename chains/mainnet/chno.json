@@ -1,20 +1,19 @@
 {
-    "chain_name": "paxi-mainnet",
-    "api": ["https://api-paxi-m.maouam.xyz","https://rest.cosmos.directory/paxi"],
-    "rpc": ["https://rpc-paxi-m.maouam.xyz","https://rpc.cosmos.directory/paxi"],
-    "coingecko": "paxi",
+    "chain_name": "cnho-stable",
+    "api": ["https://api.cnho.io"],
+    "rpc": ["https://api.cnho.io"],
+    "coingecko": "chno",
     "snapshot_provider": "",
     "sdk_version": "0.50.9", 
     "coin_type": "60",
     "min_tx_fee": "1000",
-    "addr_prefix": "paxi",
-    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/paxi.webp",
+    "addr_prefix": "chno",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/cnho.jpg",
     "assets": [{
-        "base": "upaxi",
-        "symbol": "PAXI",
+        "base": "uchno",
+        "symbol": "CHNO",
         "exponent": "6",
         "coingecko_id": "unknown", 
         "logo": ""
     }]
 }
-
