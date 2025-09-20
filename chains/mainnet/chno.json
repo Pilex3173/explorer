@@ -12,7 +12,7 @@
     "assets": [{
         "base": "uchno",
         "symbol": "CHNO",
-        "exponent": "6",
+        "exponent": "9",
         "coingecko_id": "unknown", 
         "logo": ""
     }]
