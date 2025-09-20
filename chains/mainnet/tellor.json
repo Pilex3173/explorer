@@ -1,30 +1,19 @@
 {
-  "chain_name": "tellor",
-  "status": "live",
-  "network_type": "mainnet",
-  "pretty_name": "Tellor Mainnet",
-  "chain_id": "tellor-1",
-  "bech32_prefix": "tellor",
-  "rpc": [
-    "https://mainnet.tellorlayer.com",
-    "https://api.tellor.nodestake.org"
-  ],
-  "api": [
-    "https://mainnet.tellorlayer.com",
-    "https://api.tellor.nodestake.org"
-  ],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/tellor.jpg"
-
-  "stake_currency": {
-    "coin_denom": "TRB",
-    "coin_minimal_denom": "TRB",
-    "coin_decimals": 6
-  },
-  "currencies": [
-    {
-      "coin_denom": "TRB",
-      "coin_minimal_denom": "TRB",
-      "coin_decimals": 6
-    }
-  ]
+    "chain_name": "tellor-mainnet",
+    "api": ["https://mainnet.tellorlayer.com","https://api.tellor.nodestake.org"],
+    "rpc": ["https://mainnet.tellorlayer.com","https://api.tellor.nodestake.org"],
+    "coingecko": "tellor",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.9", 
+    "coin_type": "60",
+    "min_tx_fee": "1000",
+    "addr_prefix": "tellor",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/paxi.webp",
+    "assets": [{
+        "base": "uloya",
+        "symbol": "LOYA",
+        "exponent": "6",
+        "coingecko_id": "unknown", 
+        "logo": ""
+    }]
 }
