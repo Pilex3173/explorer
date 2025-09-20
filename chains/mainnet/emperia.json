@@ -1,29 +1,19 @@
 {
-  "chain_name": "empeiria",
-  "status": "live",
-  "network_type": "testnet",
-  "pretty_name": "Empeiria Testnet",
-  "chain_id": "empeiria-testnet-1",
-  "bech32_prefix": "emp",
-  "rpc": [
-    "https://rpc.empeiria-t.nodevism.com",           
-    "https://empeiria-testnet-rpc.validator247.com" 
-  ],
-  "api": [
-    "https://api.empeiria-t.nodevism.com"
-  ],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/empeiria.jpg"'
-
-  "stake_currency": {
-    "coin_denom": "EMPE",
-    "coin_minimal_denom": "uempe",
-    "coin_decimals": 6
-  },
-  "currencies": [
-    {
-      "coin_denom": "EMPE",
-      "coin_minimal_denom": "uempe",
-      "coin_decimals": 6
-    }
-  ]
+    "chain_name": "empeiria",
+    "api": ["https://api.empeiria-t.nodevism.com","https://api.empeiria-t.nodevism.com"],
+    "rpc": ["https://rpc.empeiria-t.nodevism.com","https://empeiria-testnet-rpc.validator247.com"],
+    "coingecko": "empe",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.9", 
+    "coin_type": "60",
+    "min_tx_fee": "1000",
+    "addr_prefix": "empe",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/empeiria.jpg",
+    "assets": [{
+        "base": "uempe",
+        "symbol": "EMPE",
+        "exponent": "6",
+        "coingecko_id": "unknown", 
+        "logo": ""
+    }]
 }
