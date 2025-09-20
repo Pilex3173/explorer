@@ -1,0 +1,17 @@
+{
+  "chain_name": "tellor",
+  "status": "live",
+  "network_type": "mainnet",
+  "pretty_name": "Tellor Mainnet",
+  "chain_id": "tellor-1",
+  "bech32_prefix": "tellor",
+  "rpc": [
+    "https://mainnet.tellorlayer.com",
+    "https://api.tellor.nodestake.org"
+  ],
+  "api": [
+    "https://mainnet.tellorlayer.com",
+    "https://api.tellor.nodestake.org"
+  ],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/tellor.jpg"
+}
