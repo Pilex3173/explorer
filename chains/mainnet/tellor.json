@@ -10,7 +10,7 @@
     "addr_prefix": "TRB",
     "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/tellor.png",
     "assets": [{
-        "base": "uloya",
+        "base": "loya",
         "symbol": "TRB",
         "exponent": "9",
         "coingecko_id": "unknown", 
