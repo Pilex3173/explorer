@@ -10,4 +10,17 @@
   ],
   "api": [],
   "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/0g.jpg"
+
+  "stake_currency": {
+    "coin_denom": "0G",
+    "coin_minimal_denom": "0G",
+    "coin_decimals": 6
+  },
+  "currencies": [
+    {
+      "coin_denom": "0G",
+      "coin_minimal_denom": "0G",
+      "coin_decimals": 6
+    }
+  ]
 }
