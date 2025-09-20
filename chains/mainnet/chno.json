@@ -10,7 +10,7 @@
     "addr_prefix": "chno",
     "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/cnho.png",
     "assets": [{
-        "base": "uchno",
+        "base": "chno",
         "symbol": "CHNO",
         "exponent": "9",
         "coingecko_id": "unknown", 
