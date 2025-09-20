@@ -14,4 +14,18 @@
     "https://api.safrochain-t.nodevism.com"
   ],
   "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/safrochain.png"
+ 
+  "stake_currency": {
+    "coin_denom": "SAF",
+    "coin_minimal_denom": "SAF",
+    "coin_decimals": 6
+  },
+  "currencies": [
+    {
+      "coin_denom": "SAF",
+      "coin_minimal_denom": "SAF",
+      "coin_decimals": 6
+    }
+  ]
 }
+  
