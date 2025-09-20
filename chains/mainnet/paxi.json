@@ -13,17 +13,17 @@
     "https://api-paxi-m.maouam.xyz",
     "https://rest.cosmos.directory/paxi"
   ],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/paxi.jpg"
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/paxi.jpg",
 
   "stake_currency": {
     "coin_denom": "PAXI",
-    "coin_minimal_denom": "PAXI",
+    "coin_minimal_denom": "upaxi",
     "coin_decimals": 6
   },
   "currencies": [
     {
       "coin_denom": "PAXI",
-      "coin_minimal_denom": "PAXI",
+      "coin_minimal_denom": "upaxi",
       "coin_decimals": 6
     }
   ]
