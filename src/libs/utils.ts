@@ -29,6 +29,46 @@ export function uint8ArrayToString(arr: Uint8Array) {
   }
   return str;
 }
+// Tambahin mapping denom → simbol token
+const DENOM_MAP: Record<string, string> = {
+  uatom: 'ATOM',
+  ulume: 'LUM',
+  uemp: 'EMP',
+  uxos: 'XOS',
+  
+};
+
+// Ganti fungsi lama dengan ini
+export function formatTokenAmount(
+  assets: any,
+  tokenAmount: any,
+  decimals = 2,
+  tokenDenom = 'uatom',
+  format = true
+) {
+  const denom =
+    typeof tokenDenom === 'string'
+      ? tokenDenom
+      : // @ts-ignore
+        tokenDenom?.denom_trace?.base_denom;
+
+  let amount = 0;
+  const asset = assets.find((a: any) => a.base === denom);
+  let exp = asset ? asset.exponent : String(denom).startsWith('gravity') ? 18 : 6;
+
+  amount = Number(Number(tokenAmount)) / 10 ** exp;
+
+  // pakai mapping → kalau ga ketemu, fallback ke denom uppercase
+  const displayDenom = DENOM_MAP[denom] || denom.toUpperCase();
+
+  if (amount > 10) {
+    if (format) {
+      return numberWithCommas(parseFloat(amount.toFixed(decimals))) + ' ' + displayDenom;
+    }
+    return parseFloat(amount.toFixed(decimals));
+  }
+  return parseFloat(amount.toFixed(exp)) + ' ' + displayDenom;
+}
 
 const COUNT_ABBRS = ['', 'K', 'M', 'B', 't', 'q', 's', 'S', 'o', 'n', 'd', 'U', 'D', 'T', 'Qt', 'Qd', 'Sd', 'St'];
 
