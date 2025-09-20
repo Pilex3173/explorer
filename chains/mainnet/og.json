@@ -1,26 +1,19 @@
 {
-  "chain_name": "og",
-  "status": "live",
-  "network_type": "testnet",
-  "pretty_name": "OG Testnet",
-  "chain_id": "og-testnet-1",
-  "bech32_prefix": "og",
-  "rpc": [
-    "https://og-testnet-api.itrocket.net"
-  ],
-  "api": [],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/0g.jpg",
-
-  "stake_currency": {
-    "coin_denom": "0G",
-    "coin_minimal_denom": "u0g",
-    "coin_decimals": 6
-  },
-  "currencies": [
-    {
-      "coin_denom": "0G",
-      "coin_minimal_denom": "u0g",
-      "coin_decimals": 6
-    }
-  ]
+    "chain_name": "og",
+    "api": ["https://og-testnet-api.bonynode.online","https://og-testnet-api.bonynode.online"],
+    "rpc": ["https://og-testnet-api.itrocket.net","https://og-testnet-api.bonynode.online"],
+    "coingecko": "0g",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.9", 
+    "coin_type": "60",
+    "min_tx_fee": "1000",
+    "addr_prefix": "0g",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/paxi.webp",
+    "assets": [{
+        "base": "u0g",
+        "symbol": "0G",
+        "exponent": "6",
+        "coingecko_id": "unknown", 
+        "logo": ""
+    }]
 }
