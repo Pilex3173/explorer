@@ -1,29 +1,20 @@
 {
-  "chain_name": "cnho",
-  "status": "live",
-  "network_type": "mainnet",
-  "pretty_name": "CNHO Stable",
-  "chain_id": "cnho_stables-1",
-  "bech32_prefix": "cnho",
-  "rpc": [
-    "https://api.cnho.io"
-  ],
-  "api": [
-    "https://api.cnho.io"
-  ],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/cnho.jpg",
-  
-  "stake_currency": {
-    "coin_denom": "CHNO",
-    "coin_minimal_denom": "uchno",
-    "coin_decimals": 6
-  },
-  "currencies": [
-    {
-      "coin_denom": "CHNO",
-      "coin_minimal_denom": "uchno",
-      "coin_decimals": 6
-    }
-  ]
+    "chain_name": "paxi-mainnet",
+    "api": ["https://api-paxi-m.maouam.xyz","https://rest.cosmos.directory/paxi"],
+    "rpc": ["https://rpc-paxi-m.maouam.xyz","https://rpc.cosmos.directory/paxi"],
+    "coingecko": "paxi",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.9", 
+    "coin_type": "60",
+    "min_tx_fee": "1000",
+    "addr_prefix": "paxi",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/paxi.webp",
+    "assets": [{
+        "base": "upaxi",
+        "symbol": "PAXI",
+        "exponent": "6",
+        "coingecko_id": "unknown", 
+        "logo": ""
+    }]
 }
 
