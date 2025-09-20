@@ -1,27 +1,19 @@
 {
-  "chain_name": "xos",
-  "status": "live",
-  "network_type": "testnet",
-  "pretty_name": "XOS Testnet",
-  "chain_id": "xos-testnet-1",
-  "bech32_prefix": "xos",
-  "rpc": [
-    "https://testnet-rpc.x.ink",
-    "https://testnet-rpc.xoscan.io"
-  ],
-  "api": [],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/xos.jpg"
-
-  "stake_currency": {
-    "coin_denom": "XOS",
-    "coin_minimal_denom": "XOS",
-    "coin_decimals": 6
-  },
-  "currencies": [
-    {
-      "coin_denom": "XOS",
-      "coin_minimal_denom": "XOS",
-      "coin_decimals": 6
-    }
-  ]
+    "chain_name": "xos",
+    "api": ["https://testnet-rpc.x.ink","https://testnet-rpc.xoscan.io"],
+    "rpc": ["https://testnet-rpc.x.ink","https://testnet-rpc.xoscan.io"],
+    "coingecko": "xos",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.9", 
+    "coin_type": "60",
+    "min_tx_fee": "1000",
+    "addr_prefix": "xos",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/xos.jpg",
+    "assets": [{
+        "base": "uxos",
+        "symbol": "XOS",
+        "exponent": "6",
+        "coingecko_id": "unknown", 
+        "logo": ""
+    }]
 }
