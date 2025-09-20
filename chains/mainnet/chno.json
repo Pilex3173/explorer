@@ -12,6 +12,7 @@
     "https://api.cnho.io"
   ],
   "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/cnho.jpg",
+  
   "stake_currency": {
     "coin_denom": "CHNO",
     "coin_minimal_denom": "uchno",
