@@ -8,7 +8,7 @@
     "coin_type": "60",
     "min_tx_fee": "1000",
     "addr_prefix": "tellor",
-    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/paxi.webp",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/tellor.png",
     "assets": [{
         "base": "uloya",
         "symbol": "LOYA",
