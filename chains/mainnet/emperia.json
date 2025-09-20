@@ -12,17 +12,17 @@
   "api": [
     "https://api.empeiria-t.nodevism.com"
   ],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/empeiria.jpg"
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/empeiria.jpg"'
 
   "stake_currency": {
     "coin_denom": "EMPE",
-    "coin_minimal_denom": "EMPE",
+    "coin_minimal_denom": "uempe",
     "coin_decimals": 6
   },
   "currencies": [
     {
       "coin_denom": "EMPE",
-      "coin_minimal_denom": "EMPE",
+      "coin_minimal_denom": "uempe",
       "coin_decimals": 6
     }
   ]
