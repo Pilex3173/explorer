@@ -11,4 +11,17 @@
   ],
   "api": [],
   "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/xos.jpg"
+
+  "stake_currency": {
+    "coin_denom": "XOS",
+    "coin_minimal_denom": "XOS",
+    "coin_decimals": 6
+  },
+  "currencies": [
+    {
+      "coin_denom": "XOS",
+      "coin_minimal_denom": "XOS",
+      "coin_decimals": 6
+    }
+  ]
 }
