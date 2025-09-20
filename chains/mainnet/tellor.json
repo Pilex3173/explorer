@@ -12,7 +12,7 @@
     "assets": [{
         "base": "loya",
         "symbol": "TRB",
-        "exponent": "9",
+        "exponent": "6",
         "coingecko_id": "unknown", 
         "logo": ""
     }]
