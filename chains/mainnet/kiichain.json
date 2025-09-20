@@ -13,17 +13,17 @@
     "https://lcd.uno.sentry.testnet.v3.kiivalidator.com",
     "https://lcd.dos.sentry.testnet.v3.kiivalidator.com"
   ],
-  "logo": "https://raw.githubusercontent.com/KiiChain/kiichain/239012d2d19a662ddf141f46a05e81aac86ce5ce/assets/kii.png"
+  "logo": "https://raw.githubusercontent.com/KiiChain/kiichain/239012d2d19a662ddf141f46a05e81aac86ce5ce/assets/kii.png",
 
   "stake_currency": {
     "coin_denom": "KII",
-    "coin_minimal_denom": "KII",
+    "coin_minimal_denom": "ukii",
     "coin_decimals": 6
   },
   "currencies": [
     {
       "coin_denom": "KII",
-      "coin_minimal_denom": "KII",
+      "coin_minimal_denom": "ukii",
       "coin_decimals": 6
     }
   ]
