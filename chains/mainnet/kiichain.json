@@ -10,7 +10,7 @@
     "addr_prefix": "kii",
     "logo": "https://raw.githubusercontent.com/KiiChain/kiichain/239012d2d19a662ddf141f46a05e81aac86ce5ce/assets/kii.png",
     "assets": [{
-        "base": "ukii",
+        "base": "kii",
         "symbol": "KII",
         "exponent": "6",
         "coingecko_id": "unknown", 
