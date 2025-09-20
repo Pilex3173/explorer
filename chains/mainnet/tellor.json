@@ -14,4 +14,17 @@
     "https://api.tellor.nodestake.org"
   ],
   "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/tellor.jpg"
+
+  "stake_currency": {
+    "coin_denom": "TRB",
+    "coin_minimal_denom": "TRB",
+    "coin_decimals": 6
+  },
+  "currencies": [
+    {
+      "coin_denom": "TRB",
+      "coin_minimal_denom": "TRB",
+      "coin_decimals": 6
+    }
+  ]
 }
