@@ -1,0 +1,17 @@
+{
+  "chain_name": "bitbadges",
+  "status": "live",
+  "network_type": "mainnet",
+  "pretty_name": "BitBadges Mainnet",
+  "chain_id": "bitbadges-1",
+  "bech32_prefix": "bitbadges",
+  "rpc": [
+    "https://lcd.bitbadges.io",
+    "https://api.bitbadges.nodestake.org"
+  ],
+  "api": [
+    "https://lcd.bitbadges.io",
+    "https://api.bitbadges.nodestake.org"
+  ],
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/bitbadges.jpg"
+}
