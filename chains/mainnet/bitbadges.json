@@ -13,5 +13,18 @@
     "https://lcd.bitbadges.io",
     "https://api.bitbadges.nodestake.org"
   ],
-  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/bitbadges.jpg"
+  "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/main/bitbadges.jpg",
+
+  "stake_currency": {
+    "coin_denom": "BADGED",
+    "coin_minimal_denom": "BADGED",
+    "coin_decimals": 6
+  },
+  "currencies": [
+    {
+      "coin_denom": "BADGED",
+      "coin_minimal_denom": "BADGED",
+      "coin_decimals": 6
+    }
+  ]
 }
