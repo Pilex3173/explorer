@@ -1,14 +1,23 @@
-{
-  chain_name: "shido-mainnet",
-  api: ["https://swagger.shidoscan.com"],
-  rpc: ["https://swagger.shidoscan.com"],
-  addr_prefix: "shido",
-  coin_type: 118,
-  sdk_version: "0.50.9",
-
-  assets: [{
-    base: "ushido",
-    display: "shido",
-    symbol: "SHIDO",
-    exponent: 6
+"bank": {
+  "denom_metadata": [
+    {
+      "description": "The native token of Shido Network",
+      "denom_units": [
+        {
+          "denom": "ushido",
+          "exponent": 0,
+          "aliases": ["microshido"]
+        },
+        {
+          "denom": "shido",
+          "exponent": 6,
+          "aliases": []
+        }
+      ],
+      "base": "ushido",
+      "display": "shido",
+      "name": "Shido",
+      "symbol": "SHIDO"
+    }
+  ]
 }
