@@ -4,9 +4,9 @@
     "https://swagger.shidoscan.com"
   ],
   "rpc": [
-    "https://swagger.shidoscan.com"
+    "https://api-shido-m.maouam.xyz"
   ],
-  "coingecko": "shido",
+  "coingecko": "SHIDO",
   "snapshot_provider": "",
   "sdk_version": "0.50.9",
   "coin_type": "60",
@@ -17,7 +17,7 @@
     {
       "base": "ushido",
       "symbol": "SHIDO",
-      "exponent": "6",
+      "exponent": "9",
       "coingecko_id": "unknown",
       "logo": ""
     }
