@@ -6,7 +6,7 @@
   "rpc": [
     "https://api-shido-m.maouam.xyz"
   ],
-  "coingecko": "SHIDO",
+  "coingecko": "shido",
   "snapshot_provider": "",
   "sdk_version": "0.50.9",
   "coin_type": "60",
@@ -17,7 +17,7 @@
     {
       "base": "ushido",
       "symbol": "SHIDO",
-      "exponent": "9",
+      "exponent": "6",
       "coingecko_id": "unknown",
       "logo": ""
     }
