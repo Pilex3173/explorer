@@ -1,7 +1,7 @@
-{
-"chain_name": "shido-mainnet",
-    "api": ["https://swagger.shidoscan.com","https://swagger.shidoscan.com"],
-    "rpc": ["https://api-shido-m.maouam.xyz","https://api-shido-m.maouam.xyz"],
+```{
+    "chain_name": "shido-mainnet",
+    "api": ["https://swagger.shidoscan.com","https://api-shido-m.maouam.xyz"],
+    "rpc": ["https://tendermint.shidoscan.com","https://rpc-shido-m.maouam.xyz"],
     "coingecko": "shido",
     "snapshot_provider": "",
     "sdk_version": "0.50.9", 
@@ -10,10 +10,10 @@
     "addr_prefix": "shido",
     "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/shido.png",
     "assets": [{
-        "base": "ushido",
+        "base": "shido",
         "symbol": "SHIDO",
         "exponent": "18",
-        "coingecko_id": "unknown", 
-        "logo": ""
-}]
-}
+        "coingecko_id": "shido-2", 
+        "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/shido.png"
+    }]
+}```
