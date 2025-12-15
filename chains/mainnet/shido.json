@@ -1,4 +1,4 @@
-```{
+{
     "chain_name": "shido-mainnet",
     "api": ["https://swagger.shidoscan.com","https://api-shido-m.maouam.xyz"],
     "rpc": ["https://tendermint.shidoscan.com","https://rpc-shido-m.maouam.xyz"],
@@ -16,4 +16,4 @@
         "coingecko_id": "shido-2", 
         "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/shido.png"
     }]
-}```
+}
