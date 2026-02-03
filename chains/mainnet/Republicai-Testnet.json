@@ -12,8 +12,8 @@
     "assets": [{
         "base": "rai",
         "symbol": "RAI",
-        "exponent": "18",
-        "coingecko_id": "rai", 
+        "exponent": "36",
+        "coingecko_id": "rai-2", 
         "logo": "https://explorer.nodestake.org/logos/republicai.jpg"
     }]
 }
