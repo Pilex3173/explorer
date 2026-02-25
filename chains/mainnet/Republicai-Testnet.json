@@ -1,7 +1,7 @@
 {
     "chain_name": "republicai-testnet",
-    "api": ["https://api-t.republicai.nodestake.org","https://api-t.republic.vinjan-inc.com","https://rest.republicai.io"],
-    "rpc": ["https://api-t.republicai.nodestake.org","https://api-t.republic.vinjan-inc.com","https://rest.republicai.io"],
+    "api": ["https://rpc.republicai.io","https://api-t.republic.vinjan-inc.com"],
+    "rpc": ["https://rest.republicai.io","https://api-t.republic.vinjan-inc.com"],
     "coingecko": "arai",
     "snapshot_provider": "",
     "sdk_version": "0.50.9", 
