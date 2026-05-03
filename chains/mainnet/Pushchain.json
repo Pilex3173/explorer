@@ -7,7 +7,7 @@
     "sdk_version": "0.50.x",
     "coin_type": "118",
     "min_tx_fee": "1000",
-    "addr_prefix": "pc",
+    "addr_prefix": "pushchain",
     "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/pushchain.jpg",
     "assets": [{
         "base": "upc",
