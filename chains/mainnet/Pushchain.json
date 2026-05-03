@@ -7,11 +7,11 @@
     "sdk_version": "0.50.x",
     "coin_type": "118",
     "min_tx_fee": "1000",
-    "addr_prefix": "push",
+    "addr_prefix": "pc",
     "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/pushchain.jpg",
     "assets": [{
-        "base": "upush",
-        "symbol": "PUSH",
+        "base": "upc",
+        "symbol": "PC",
         "exponent": "6",
         "coingecko_id": "",
         "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/pushchain.jpg"
