@@ -1,0 +1,22 @@
+{
+    "chain_name": "pushchain",
+    "chain_id": "push_42101-1",
+    "api": [
+        "https://api-t.pushchain.nodestake.org"
+    ],
+    "rpc": [],
+    "coingecko": "",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.x",
+    "coin_type": "118",
+    "min_tx_fee": "1000",
+    "addr_prefix": "push",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/pushchain.jpg",
+    "assets": [{
+        "base": "upush",
+        "symbol": "PUSH",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/pushchain.jpg"
+    }]
+}
