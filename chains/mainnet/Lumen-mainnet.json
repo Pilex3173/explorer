@@ -1,0 +1,25 @@
+{
+    "chain_name": "lumen",
+    "chain_id": "lumen",
+    "api": [
+        "https://lumen-api.node9x.com/",
+        "https://lumen-mainnet-api.mekonglabs.tech",
+        "https://m-lumen.api.utsa.tech",
+        "https://api-lumen.winnode.xyz"
+    ],
+    "rpc": [],
+    "coingecko": "",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.x",
+    "coin_type": "118",
+    "min_tx_fee": "0",
+    "addr_prefix": "lmn",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumen.png",
+    "assets": [{
+        "base": "ulmn",
+        "symbol": "LMN",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumen.png"
+    }]
+}
