@@ -1,6 +1,5 @@
 {
     "chain_name": "lumen",
-    "chain_id": "lumen",
     "api": [
         "https://lumen-api.node9x.com/",
         "https://lumen-mainnet-api.mekonglabs.tech",
