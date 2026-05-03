@@ -12,7 +12,7 @@
     "assets": [{
         "base": "upc",
         "symbol": "PC",
-        "exponent": "0",
+        "exponent": "12",
         "coingecko_id": "",
         "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/pushchain.jpg"
     }]
