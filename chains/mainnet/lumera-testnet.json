@@ -1,0 +1,24 @@
+{
+    "chain_name": "lumera",
+    "chain_id": "lumera-testnet-2",
+    "api": [
+        "https://lumera-testnet-api.polkachu.com"
+    ],
+    "rpc": [
+        "https://api-t.lumera.nodestake.org"
+    ],
+    "coingecko": "",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.x",
+    "coin_type": "118",
+    "min_tx_fee": "1000",
+    "addr_prefix": "lumera",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumera.png",
+    "assets": [{
+        "base": "ulumera",
+        "symbol": "LUMERA",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumera.png"
+    }]
+}
