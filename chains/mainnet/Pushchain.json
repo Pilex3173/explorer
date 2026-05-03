@@ -1,9 +1,6 @@
 {
-    "chain_name": "pushchain",
-    "chain_id": "push_42101-1",
-    "api": [
-        "https://api-t.pushchain.nodestake.org"
-    ],
+    "chain_name": "pushchain-testnet",
+    "api": ["https://api-t.pushchain.nodestake.org"],
     "rpc": [],
     "coingecko": "",
     "snapshot_provider": "",
