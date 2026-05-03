@@ -1,12 +1,7 @@
 {
-    "chain_name": "lumera",
-    "chain_id": "lumera-testnet-2",
-    "api": [
-        "https://lumera-testnet-api.polkachu.com"
-    ],
-    "rpc": [
-        "https://api-t.lumera.nodestake.org"
-    ],
+    "chain_name": "lumera-testnet",
+    "api": ["https://lumera-testnet-api.polkachu.com"],
+    "rpc": ["https://api-t.lumera.nodestake.org"],
     "coingecko": "",
     "snapshot_provider": "",
     "sdk_version": "0.50.x",
