@@ -7,11 +7,11 @@
     "sdk_version": "0.50.x",
     "coin_type": "118",
     "min_tx_fee": "1000",
-    "addr_prefix": "lumera",
+    "addr_prefix": "lume",
     "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumera.png",
     "assets": [{
-        "base": "ulumera",
-        "symbol": "LUMERA",
+        "base": "ulume",
+        "symbol": "LUME",
         "exponent": "6",
         "coingecko_id": "",
         "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/lumera.png"
