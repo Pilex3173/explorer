@@ -6,7 +6,7 @@
     "snapshot_provider": "",
     "sdk_version": "0.50.x",
     "coin_type": "118",
-    "min_tx_fee": "1",
+    "min_tx_fee": "1000000",
     "addr_prefix": "pc",
     "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/pushchain.jpg",
     "assets": [{
