@@ -1,7 +1,7 @@
 {
     "chain_name": "pushchain-testnet",
     "api": ["https://api-t.pushchain.nodestake.org"],
-    "rpc": [],
+    "rpc": ["https://api-t.pushchain.nodestake.org"],
     "coingecko": "",
     "snapshot_provider": "",
     "sdk_version": "0.50.x",
