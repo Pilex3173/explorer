@@ -1,12 +1,13 @@
 {
     "chain_name": "lumen",
     "api": [
-        "https://lumen-api.node9x.com/",
-        "https://lumen-mainnet-api.mekonglabs.tech",
-        "https://m-lumen.api.utsa.tech",
-        "https://api-lumen.winnode.xyz"
+        "https://lumen-api.node9x.com",
+        "https://m-lumen.api.utsa.tech"
     ],
-    "rpc": [],
+    "rpc": [
+        "https://lumen-rpc.node9x.com",
+        "https://m-lumen.rpc.utsa.tech"
+    ],
     "coingecko": "",
     "snapshot_provider": "",
     "sdk_version": "0.50.9",
