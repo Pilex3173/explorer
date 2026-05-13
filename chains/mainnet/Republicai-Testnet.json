@@ -1,10 +1,10 @@
 {
     "chain_name": "republicai-testnet",
-    "api": ["https://rpc.republicai.io","https://api-t.republic.vinjan-inc.com"],
-    "rpc": ["https://rest.republicai.io","https://api-t.republic.vinjan-inc.com"],
+    "rpc": ["https://rpc.republicai.io", "https://rpc-t.republic.vinjan-inc.com"],
+    "api": ["https://rest.republicai.io", "https://api-t.republic.vinjan-inc.com"],
     "coingecko": "arai",
     "snapshot_provider": "",
-    "sdk_version": "0.50.9", 
+    "sdk_version": "0.50.9",
     "coin_type": "60",
     "min_tx_fee": "1000",
     "addr_prefix": "rai",
@@ -13,7 +13,7 @@
         "base": "arai",
         "symbol": "RAI",
         "exponent": "18",
-        "coingecko_id": "arai-2", 
+        "coingecko_id": "arai-2",
         "logo": "https://explorer.nodestake.org/logos/republicai.jpg"
     }]
 }
