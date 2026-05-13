@@ -9,7 +9,7 @@
     "rpc": [],
     "coingecko": "",
     "snapshot_provider": "",
-    "sdk_version": "0.50.6",
+    "sdk_version": "0.50.9",
     "coin_type": "118",
     "min_tx_fee": "0",
     "addr_prefix": "lmn",
