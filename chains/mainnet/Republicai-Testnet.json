@@ -4,7 +4,7 @@
     "rpc": ["https://rest.republicai.io","https://api-t.republic.vinjan-inc.com"],
     "coingecko": "arai",
     "snapshot_provider": "",
-    "sdk_version": "0.50.9", 
+    "sdk_version": "0.50.6", 
     "coin_type": "60",
     "min_tx_fee": "1000",
     "addr_prefix": "rai",
