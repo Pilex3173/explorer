@@ -13,4 +13,6 @@
   "evm_chain_id": 8453,
   "network_type": "evm-mainnet",
   "pretty_name": "Base"
+  "keplr_features": [],
+  "features": ["dashboard", "blocks", "tx"],
 }
