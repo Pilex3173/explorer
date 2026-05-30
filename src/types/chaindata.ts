@@ -1,29 +1,24 @@
 import type { Asset as RegistryAsset, DenomUnit as RegistryDenomUnit } from '@chain-registry/types';
 import type { Chain as RegistryChain, Endpoint as RegistryEndPoint } from '@chain-registry/types/chain.schema';
-
 export enum NetworkType {
   Mainnet,
   Testnet,
 }
-
 export enum ConfigSource {
   MainnetCosmosDirectory = 'https://chains.cosmos.directory',
   TestnetCosmosDirectory = 'https://chains.testcosmos.directory',
   Local = 'local',
 }
-
 export enum EndpointType {
   rpc,
   rest,
   grpc,
   // webgrpc
 }
-
 export interface Chain extends RegistryChain {}
 export interface Asset extends RegistryAsset {}
 export interface Endpoint extends RegistryEndPoint {}
 export interface DenomUnit extends RegistryDenomUnit {}
-
 export interface LocalChainConfig {
   addr_prefix: string;
   consensus_prefix?: string;
@@ -50,6 +45,8 @@ export interface LocalChainConfig {
   sdk_version: string;
   registry_name?: string;
   features?: string[];
+  explorer_url?: string;        // URL explorer resmi (Etherscan, Arbiscan, dll)
+  evm_chain_id?: number;        // EVM chain ID (1=Ethereum, 56=BSC, dll)
   keplr_price_step?: {
     low: number;
     average: number;
@@ -63,7 +60,6 @@ export interface LocalChainConfig {
     fees: string;
   };
 }
-
 // Chain config structure of cosmos.directory
 export interface DirectoryChainConfig {
   assets: Asset[];
@@ -100,7 +96,6 @@ export interface DirectoryChainConfig {
     tendermint_version: string;
   };
 }
-
 export interface ChainConfig {
   chainName: string;
   prettyName: string;
@@ -112,6 +107,8 @@ export interface ChainConfig {
   assets: Asset[];
   themeColor?: string;
   features?: string[];
+  explorerUrl?: string;         // URL explorer resmi (Etherscan, Arbiscan, dll)
+  evmChainId?: number;          // EVM chain ID (1=Ethereum, 56=BSC, dll)
   endpoints: {
     rest?: Endpoint[];
     rpc?: Endpoint[];
