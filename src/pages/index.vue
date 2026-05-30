@@ -19,13 +19,13 @@ const allChains = computed(() => Object.values(dashboard.chains) as ChainConfig[
 const chainsByTab = computed(() => {
   const all = allChains.value;
   if (activeTab.value === 'evm-mainnet') {
-    return all.filter((x: any) => x.network_type === 'evm-mainnet' || x.evm_chain_id);
+    return all.filter((x: any) => x.networkType === 'evm-mainnet');
   }
   if (activeTab.value === 'evm-testnet') {
-    return all.filter((x: any) => x.network_type === 'evm-testnet');
+    return all.filter((x: any) => x.networkType === 'evm-testnet');
   }
   // default: cosmos (bukan evm)
-  return all.filter((x: any) => !x.evm_chain_id && x.network_type !== 'evm-mainnet' && x.network_type !== 'evm-testnet');
+  return all.filter((x: any) => x.networkType !== 'evm-mainnet' && x.networkType !== 'evm-testnet');
 });
 
 // Filter by search keyword
@@ -51,13 +51,13 @@ const featured = computed(() => {
 
 // Hitung jumlah per tab untuk badge
 const cosmosCount = computed(() =>
-  allChains.value.filter((x: any) => !x.evm_chain_id && x.network_type !== 'evm-mainnet' && x.network_type !== 'evm-testnet').length
+  allChains.value.filter((x: any) => x.networkType !== 'evm-mainnet' && x.networkType !== 'evm-testnet').length
 );
 const evmMainnetCount = computed(() =>
-  allChains.value.filter((x: any) => x.network_type === 'evm-mainnet' || x.evm_chain_id).length
+  allChains.value.filter((x: any) => x.networkType === 'evm-mainnet').length
 );
 const evmTestnetCount = computed(() =>
-  allChains.value.filter((x: any) => x.network_type === 'evm-testnet').length
+  allChains.value.filter((x: any) => x.networkType === 'evm-testnet').length
 );
 
 const chainStore = useBlockchain();
