@@ -1,18 +1,35 @@
 {
   "chain_name": "base",
-  "api": [{"address": "https://rpc.ankr.com/base", "provider": "Ankr"}],
-  "rpc": [{"address": "https://rpc.ankr.com/base", "provider": "Ankr"}],
-  "sdk_version": "0.47.x",
+  "pretty_name": "Base",
+  "network_type": "evm-mainnet",
   "coin_type": "60",
-  "min_tx_fee": "21000",
-  "assets": [{"base": "wei", "symbol": "ETH", "exponent": "18", "coingecko_id": "ethereum", "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/base/images/base.svg"}],
   "addr_prefix": "0x",
+  "evm_chain_id": 8453,
+  "sdk_version": "0.47.x",
+  "min_tx_fee": "21000",
   "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/base/images/base.svg",
   "theme_color": "#0052FF",
-  "fees": {"fee_tokens": [{"denom": "wei"}]},
-  "evm_chain_id": 8453,
-  "network_type": "evm-mainnet",
-  "pretty_name": "Base"
+  "api": [
+    {"address": "https://mainnet.base.org", "provider": "Base"},
+    {"address": "https://rpc.ankr.com/base", "provider": "Ankr"}
+  ],
+  "rpc": [
+    {"address": "https://mainnet.base.org", "provider": "Base"},
+    {"address": "https://rpc.ankr.com/base", "provider": "Ankr"}
+  ],
+  "grpc": [],
+  "assets": [
+    {
+      "base": "wei",
+      "symbol": "ETH",
+      "exponent": "18",
+      "coingecko_id": "ethereum",
+      "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg"
+    }
+  ],
+  "fees": {
+    "fee_tokens": [{"denom": "wei"}]
+  },
   "keplr_features": [],
-  "features": ["dashboard", "blocks", "tx"],
+  "features": ["dashboard", "blocks", "tx"]
 }
