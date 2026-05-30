@@ -13,4 +13,6 @@
   "evm_chain_id": 56,
   "network_type": "evm-mainnet",
   "pretty_name": "BNB Chain"
+  "keplr_features": [],
+  "features": ["dashboard", "blocks", "tx"],
 }
