@@ -13,4 +13,6 @@
   "evm_chain_id": 10,
   "network_type": "evm-mainnet",
   "pretty_name": "Optimism"
+  "keplr_features": [],
+  "features": ["dashboard", "blocks", "tx"],
 }
