@@ -13,4 +13,7 @@
   "evm_chain_id": 42161,
   "network_type": "evm-mainnet",
   "pretty_name": "Arbitrum One"
+  "keplr_features": [],
+  "features": ["dashboard", "blocks", "tx"],
+  
 }
