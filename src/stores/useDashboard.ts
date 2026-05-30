@@ -64,6 +64,8 @@ export function convertFromLocal(lc: LocalChainConfig): ChainConfig {
   conf.keplrPriceStep = lc.keplr_price_step;
   conf.themeColor = lc.theme_color;
   conf.faucet = lc.faucet;
+  conf.explorerUrl = lc.explorer_url;  // URL explorer resmi (Etherscan, Arbiscan, dll)
+  conf.evmChainId = lc.evm_chain_id;   // EVM chain ID
   return conf;
 }
 
@@ -108,30 +110,6 @@ export function getLogo(
   return undefined;
 }
 
-// Unused function, kept for reference
-// function createChainFromDirectory(source: DirectoryChain): ChainConfig {
-//   const conf = {} as ChainConfig;
-//   conf.apis = source.best_apis;
-//   conf.bech32_prefix = source.bech32_prefix;
-//   conf.chain_id = source.chain_id;
-//   conf.chain_name = source.chain_name;
-//   conf.explorers = source.explorers;
-//   conf.pretty_name = source.pretty_name;
-//   if (source.versions) {
-//     conf.codebase = {
-//       recommended_version: source.versions.application_version,
-//       cosmos_sdk_version: source.versions.cosmos_sdk_version,
-//       tendermint_version: source.versions.tendermint_version,
-//     };
-//   }
-//   if (source.image) {
-//     conf.logo_URIs = {
-//       svg: source.image,
-//     };
-//   }
-//   return conf;
-// }
-
 export enum LoadingStatus {
   Empty,
   Loading,
@@ -163,8 +141,7 @@ export const useDashboard = defineStore('dashboard', {
     },
     loadingPrices() {
       const coinIds = [] as string[];
-      const keys = Object.keys(this.chains); // load all blockchain
-      // Object.keys(this.favoriteMap) //only load favorite once it has too many chains
+      const keys = Object.keys(this.chains);
       keys.forEach((k) => {
         if (Array.isArray(this.chains[k]?.assets))
           this.chains[k].assets.forEach((a) => {
@@ -181,7 +158,7 @@ export const useDashboard = defineStore('dashboard', {
           });
       });
 
-      const currencies = ['usd, cny']; // usd,cny,eur,jpy,krw,sgd,hkd
+      const currencies = ['usd, cny'];
       get(
         `${coingeckoUrl}/api/v3/simple/price?include_24hr_change=true&vs_currencies=${currencies.join(
           ','
