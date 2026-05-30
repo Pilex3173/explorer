@@ -96,12 +96,13 @@ const show_ad = computed(() => {
       <div class="flex justify-between mt-1 pl-4 py-4 mb-1">
         <RouterLink to="/" class="flex items-center gap-2">
           <!-- Logo Mark P3 -->
-          <div
-            class="w-9 h-9 rounded-xl flex items-center justify-center text-white font-bold text-sm flex-shrink-0"
-            style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)"
-          >
-            P3
-          </div>
+         <div class="w-9 h-9 rounded-xl overflow-hidden flex-shrink-0">
+  <img
+    src="https://avatars.githubusercontent.com/u/158312970?v=4&size=64"
+    alt="pilex3173"
+    class="w-full h-full object-cover"
+  />
+</div>
           <div class="flex flex-col leading-tight">
             <span class="text-base font-bold dark:text-white text-gray-800 tracking-tight">
               pilex<span class="text-indigo-500">3173</span>
