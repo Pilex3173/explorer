@@ -52,7 +52,7 @@ const changeOpen = (index: Number) => {
   }
 };
 
-// Hapus showDiscord - ganti dengan link sosial pilex3173
+
 const showDiscord = false;
 
 function isNavGroup(nav: VerticalNavItems | any): nav is NavGroup {
@@ -81,7 +81,7 @@ const behind = computed(() => {
 dayjs();
 
 const show_ad = computed(() => {
-  return false; // nonaktifkan ads
+  return false; 
 });
 </script>
 
@@ -271,7 +271,7 @@ const show_ad = computed(() => {
 
         <!-- Twitter / X -->
         <a
-          href="https://twitter.com/pilex3173"
+          href="https://twitter.com/ardihandoyo"
           target="_blank"
           class="py-2 px-4 flex items-center cursor-pointer rounded-lg hover:bg-gray-100 dark:hover:bg-[#1e2235]"
         >
