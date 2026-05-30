@@ -1,19 +1,35 @@
 {
   "chain_name": "arbitrum",
-  "api": [{"address": "https://rpc.ankr.com/arbitrum", "provider": "Ankr"}],
-  "rpc": [{"address": "https://rpc.ankr.com/arbitrum", "provider": "Ankr"}],
-  "sdk_version": "0.47.x",
-  "coin_type": "60",
-  "min_tx_fee": "21000",
-  "assets": [{"base": "wei", "symbol": "ETH", "exponent": "18", "coingecko_id": "ethereum", "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/arbitrum/images/arb.svg"}],
-  "addr_prefix": "0x",
-  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/arbitrum/images/arb.svg",
-  "theme_color": "#2D374B",
-  "fees": {"fee_tokens": [{"denom": "wei"}]},
-  "evm_chain_id": 42161,
+  "pretty_name": "Arbitrum One",
   "network_type": "evm-mainnet",
-  "pretty_name": "Arbitrum One"
+  "coin_type": "60",
+  "addr_prefix": "0x",
+  "evm_chain_id": 42161,
+  "sdk_version": "0.47.x",
+  "min_tx_fee": "21000",
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/arbitrum/images/arb.svg",
+  "theme_color": "#28A0F0",
+  "api": [
+    {"address": "https://rpc.ankr.com/arbitrum", "provider": "Ankr"},
+    {"address": "https://arb1.arbitrum.io/rpc", "provider": "Arbitrum"}
+  ],
+  "rpc": [
+    {"address": "https://rpc.ankr.com/arbitrum", "provider": "Ankr"},
+    {"address": "https://arb1.arbitrum.io/rpc", "provider": "Arbitrum"}
+  ],
+  "grpc": [],
+  "assets": [
+    {
+      "base": "wei",
+      "symbol": "ETH",
+      "exponent": "18",
+      "coingecko_id": "ethereum",
+      "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/ethereum/images/eth-white.svg"
+    }
+  ],
+  "fees": {
+    "fee_tokens": [{"denom": "wei"}]
+  },
   "keplr_features": [],
-  "features": ["dashboard", "blocks", "tx"],
-  
+  "features": ["dashboard", "blocks", "tx"]
 }
