@@ -1,0 +1,16 @@
+{
+  "chain_name": "polygon",
+  "api": [{"address": "https://rpc.ankr.com/polygon", "provider": "Ankr"}],
+  "rpc": [{"address": "https://rpc.ankr.com/polygon", "provider": "Ankr"}],
+  "sdk_version": "0.47.x",
+  "coin_type": "60",
+  "min_tx_fee": "21000",
+  "assets": [{"base": "wei", "symbol": "POL", "exponent": "18", "coingecko_id": "matic-network", "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/matic-purple.svg"}],
+  "addr_prefix": "0x",
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/matic-purple.svg",
+  "theme_color": "#8247E5",
+  "fees": {"fee_tokens": [{"denom": "wei"}]},
+  "evm_chain_id": 137,
+  "network_type": "evm-mainnet",
+  "pretty_name": "Polygon"
+}
