@@ -1,0 +1,16 @@
+{
+  "chain_name": "bnbchain",
+  "api": [{"address": "https://rpc.ankr.com/bsc", "provider": "Ankr"}],
+  "rpc": [{"address": "https://rpc.ankr.com/bsc", "provider": "Ankr"}],
+  "sdk_version": "0.47.x",
+  "coin_type": "60",
+  "min_tx_fee": "21000",
+  "assets": [{"base": "wei", "symbol": "BNB", "exponent": "18", "coingecko_id": "binancecoin", "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/bnb.svg"}],
+  "addr_prefix": "0x",
+  "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/binancesmartchain/images/bnb.svg",
+  "theme_color": "#F3BA2F",
+  "fees": {"fee_tokens": [{"denom": "wei"}]},
+  "evm_chain_id": 56,
+  "network_type": "evm-mainnet",
+  "pretty_name": "BNB Chain"
+}
