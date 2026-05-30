@@ -26,35 +26,26 @@ const addFavor = (e: Event) => {
   dashboardStore.favoriteMap[props.name] = !dashboardStore?.favoriteMap?.[props.name];
   window.localStorage.setItem('favoriteMap', JSON.stringify(dashboardStore.favoriteMap));
 };
-
-const openExplorer = (e: Event) => {
-  e.stopPropagation();
-  e.preventDefault();
-  if (explorerUrl.value) {
-    window.open(explorerUrl.value, '_blank');
-  }
-};
 </script>
 
 <template>
-  <RouterLink
-    :to="`/${name}`"
-    class="bg-base-100 hover:bg-gray-100 dark:hover:bg-[#373f59] rounded shadow flex items-center px-3 py-3 cursor-pointer group"
+  <!-- EVM chain: klik seluruh box buka explorer resmi di tab baru -->
+  <a
+    v-if="isEvm && explorerUrl"
+    :href="explorerUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="bg-base-100 hover:bg-gray-100 dark:hover:bg-[#373f59] rounded shadow flex items-center px-3 py-3 cursor-pointer"
   >
-    <!-- Chain Logo -->
     <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
       <img :src="conf.logo" class="w-full h-full object-cover" />
     </div>
-
-    <!-- Chain Name + Badge -->
     <div class="ml-3 flex-1 min-w-0">
       <div class="font-semibold text-base truncate capitalize">
         {{ conf?.prettyName || props.name }}
       </div>
       <div class="flex items-center gap-1 mt-0.5">
-        <!-- EVM Badge -->
         <span
-          v-if="isEvm"
           class="text-[10px] px-1.5 py-0.5 rounded font-semibold"
           :class="(conf as any).networkType === 'evm-mainnet'
             ? 'bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300'
@@ -62,32 +53,76 @@ const openExplorer = (e: Event) => {
         >
           {{ (conf as any).networkType === 'evm-mainnet' ? 'EVM' : 'EVM Testnet' }}
         </span>
+        <span class="text-[10px] text-gray-400 dark:text-gray-500 flex items-center gap-0.5">
+          <Icon icon="mdi:open-in-new" class="text-xs" />
+          explorer
+        </span>
       </div>
     </div>
+    <div
+      @click="addFavor"
+      class="p-1.5 rounded text-xl transition-colors"
+      :class="{
+        'text-warning': dashboardStore?.favoriteMap?.[props.name],
+        'text-gray-300 dark:text-gray-500 hover:text-warning': !dashboardStore?.favoriteMap?.[props.name],
+      }"
+    >
+      <Icon icon="mdi-star" />
+    </div>
+  </a>
 
-    <!-- Actions -->
-    <div class="flex items-center gap-1 ml-2 flex-shrink-0">
-      <!-- Open External Explorer button (EVM only) -->
-      <button
-        v-if="isEvm && explorerUrl"
-        @click="openExplorer"
-        class="p-1.5 rounded text-gray-400 hover:text-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 transition-colors"
-        title="Open official block explorer"
-      >
-        <Icon icon="mdi:open-in-new" class="text-base" />
-      </button>
-
-      <!-- Favorite star -->
-      <div
-        @click="addFavor"
-        class="p-1.5 rounded text-xl transition-colors"
-        :class="{
-          'text-warning': dashboardStore?.favoriteMap?.[props.name],
-          'text-gray-300 dark:text-gray-500 hover:text-warning': !dashboardStore?.favoriteMap?.[props.name],
-        }"
-      >
-        <Icon icon="mdi-star" />
+  <!-- EVM chain tanpa explorerUrl: fallback ke halaman internal -->
+  <RouterLink
+    v-else-if="isEvm && !explorerUrl"
+    :to="`/${name}`"
+    class="bg-base-100 hover:bg-gray-100 dark:hover:bg-[#373f59] rounded shadow flex items-center px-3 py-3 cursor-pointer"
+  >
+    <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+      <img :src="conf.logo" class="w-full h-full object-cover" />
+    </div>
+    <div class="ml-3 flex-1 min-w-0">
+      <div class="font-semibold text-base truncate capitalize">
+        {{ conf?.prettyName || props.name }}
       </div>
+      <div class="flex items-center gap-1 mt-0.5">
+        <span class="text-[10px] px-1.5 py-0.5 rounded font-semibold bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300">
+          EVM
+        </span>
+      </div>
+    </div>
+    <div
+      @click="addFavor"
+      class="p-1.5 rounded text-xl transition-colors"
+      :class="{
+        'text-warning': dashboardStore?.favoriteMap?.[props.name],
+        'text-gray-300 dark:text-gray-500 hover:text-warning': !dashboardStore?.favoriteMap?.[props.name],
+      }"
+    >
+      <Icon icon="mdi-star" />
+    </div>
+  </RouterLink>
+
+  <!-- Cosmos chain: RouterLink biasa ke halaman internal -->
+  <RouterLink
+    v-else
+    :to="`/${name}`"
+    class="bg-base-100 hover:bg-gray-100 dark:hover:bg-[#373f59] rounded shadow flex items-center px-3 py-3 cursor-pointer"
+  >
+    <div class="w-8 h-8 rounded-full overflow-hidden flex-shrink-0">
+      <img :src="conf.logo" class="w-full h-full object-cover" />
+    </div>
+    <div class="font-semibold ml-4 text-base flex-1 truncate capitalize">
+      {{ conf?.prettyName || props.name }}
+    </div>
+    <div
+      @click="addFavor"
+      class="pl-4 text-xl"
+      :class="{
+        'text-warning': dashboardStore?.favoriteMap?.[props.name],
+        'text-gray-300 dark:text-gray-500': !dashboardStore?.favoriteMap?.[props.name],
+      }"
+    >
+      <Icon icon="mdi-star" />
     </div>
   </RouterLink>
 </template>
