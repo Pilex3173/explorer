@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pilex3173 Explorer - Cosmos & EVM Blockchain Explorer</title>
+    <meta
+      name="description"
+      content="pilex3173 Explorer - Multi-chain block explorer & web wallet for Cosmos SDK, EVM mainnets and testnets. Powered by Ping Dashboard."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/loader.css" />
+    <style>
+      :root {
+        --indigo: #6366f1;
+        --indigo-dark: #4f46e5;
+        --indigo-light: #818cf8;
+        --purple: #a78bfa;
+        --bg-base: #0d0f14;
+        --bg-surface: rgba(255,255,255,0.03);
+        --bg-hover: rgba(255,255,255,0.06);
+        --border: rgba(255,255,255,0.07);
+        --border-hover: rgba(99,102,241,0.3);
+        --text-primary: #f1f5f9;
+        --text-secondary: #94a3b8;
+        --text-muted: #64748b;
+        --green: #4ade80;
+        --amber: #fbbf24;
+        --radius: 12px;
+      }
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; }
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: var(--bg-base);
+        color: var(--text-primary);
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* ── Loader ── */
+      #loading-bg {
+        position: fixed; inset: 0; z-index: 9999;
+        background: var(--bg-base);
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 2rem;
+      }
+      .loading-logo {
+        display: flex; align-items: center; gap: 12px;
+      }
+      .loading-logo-mark {
+        width: 52px; height: 52px;
+        background: linear-gradient(135deg, var(--indigo), var(--purple));
+        border-radius: 14px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 20px; font-weight: 700; color: white;
+        letter-spacing: -0.5px;
+      }
+      .loading-logo-text {
+        font-size: 24px; font-weight: 700; color: var(--text-primary);
+        letter-spacing: -0.5px;
+      }
+      .loading-logo-text span { color: var(--indigo-light); }
+      .pre-loading { display: flex; gap: 8px; }
+      .effects {
+        width: 8px; height: 8px; border-radius: 50%;
+        background: var(--indigo);
+        animation: bounce 1.2s ease-in-out infinite;
+      }
+      .effect-2 { animation-delay: 0.2s; background: var(--purple); }
+      .effect-3 { animation-delay: 0.4s; background: var(--indigo-light); }
+      @keyframes bounce {
+        0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+        40% { transform: translateY(-8px); opacity: 1; }
+      }
+
+      /* ── Navbar ── */
+      .px-nav {
+        position: sticky; top: 0; z-index: 100;
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 0 2rem; height: 64px;
+        background: rgba(13,15,20,0.92);
+        border-bottom: 1px solid var(--border);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+      }
+      .px-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+      .px-logo-mark {
+        width: 36px; height: 36px;
+        background: linear-gradient(135deg, var(--indigo), var(--purple));
+        border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 13px; font-weight: 700; color: white;
+      }
+      .px-logo-text { font-size: 16px; font-weight: 600; color: var(--text-primary); letter-spacing: -0.3px; }
+      .px-logo-text span { color: var(--indigo-light); }
+      .px-nav-links { display: flex; gap: 2px; }
+      .px-nav-link {
+        padding: 6px 13px; border-radius: 8px; font-size: 13px;
+        color: var(--text-secondary); cursor: pointer;
+        border: none; background: none; transition: all 0.15s;
+      }
+      .px-nav-link:hover { color: var(--text-primary); background: var(--bg-hover); }
+      .px-nav-btn {
+        padding: 7px 16px; border-radius: 8px; font-size: 13px; font-weight: 500;
+        background: var(--indigo-dark); color: white; border: none; cursor: pointer;
+        transition: background 0.15s;
+      }
+      .px-nav-btn:hover { background: var(--indigo); }
+
+      /* ── Hero ── */
+      .px-hero { padding: 4rem 2rem 2.5rem; text-align: center; }
+      .px-badge {
+        display: inline-flex; align-items: center; gap: 7px;
+        background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.22);
+        color: var(--indigo-light); padding: 5px 14px; border-radius: 24px; font-size: 12px;
+        margin-bottom: 1.5rem;
+      }
+      .px-badge-dot {
+        width: 6px; height: 6px; background: var(--indigo); border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.35} }
+      .px-hero h1 {
+        font-size: 3rem; font-weight: 700; letter-spacing: -1.5px;
+        color: var(--text-primary); line-height: 1.15; margin-bottom: 1rem;
+      }
+      .px-hero h1 span {
+        background: linear-gradient(135deg, var(--indigo), var(--purple));
+        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .px-hero p { color: var(--text-muted); font-size: 15px; max-width: 460px; margin: 0 auto 2rem; line-height: 1.65; }
+      .px-search-wrap { position: relative; max-width: 580px; margin: 0 auto; }
+      .px-search {
+        width: 100%; padding: 14px 50px 14px 18px;
+        background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+        border-radius: var(--radius); color: var(--text-primary); font-size: 14px;
+        font-family: inherit; outline: none; transition: border 0.15s, background 0.15s;
+      }
+      .px-search:focus { border-color: rgba(99,102,241,0.5); background: rgba(255,255,255,0.07); }
+      .px-search::placeholder { color: #475569; }
+      .px-search-icon {
+        position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+        color: #475569; font-size: 17px; pointer-events: none;
+      }
+
+      /* ── Stats ── */
+      .px-stats-grid {
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+        padding: 0 2rem 2.5rem; max-width: 1200px; margin: 0 auto;
+      }
+      .px-stat {
+        background: var(--bg-surface); border: 1px solid var(--border);
+        border-radius: var(--radius); padding: 1.25rem;
+        transition: border-color 0.15s, background 0.15s;
+      }
+      .px-stat:hover { background: var(--bg-hover); border-color: rgba(255,255,255,0.1); }
+      .px-stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 8px; }
+      .px-stat-val { font-size: 26px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.5px; }
+      .px-stat-sub { font-size: 11px; color: #22c55e; margin-top: 5px; }
+
+      /* ── Chains section ── */
+      .px-section { padding: 0 2rem 3rem; max-width: 1200px; margin: 0 auto; }
+      .px-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; flex-wrap: wrap; gap: 12px; }
+      .px-section-title { font-size: 15px; font-weight: 600; color: var(--text-primary); }
+      .px-tabs {
+        display: flex; gap: 3px; background: rgba(255,255,255,0.04);
+        padding: 3px; border-radius: 10px; border: 1px solid var(--border);
+      }
+      .px-tab {
+        padding: 5px 14px; border-radius: 7px; font-size: 12px; font-weight: 500;
+        cursor: pointer; transition: all 0.15s; color: var(--text-muted);
+        border: none; background: none; font-family: inherit;
+      }
+      .px-tab.active { background: rgba(99,102,241,0.18); color: var(--indigo-light); }
+      .px-tab:hover:not(.active) { color: var(--text-secondary); }
+
+      /* ── Chain cards ── */
+      .px-chains { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+      .px-chain {
+        background: var(--bg-surface); border: 1px solid var(--border);
+        border-radius: var(--radius); padding: 1rem; cursor: pointer;
+        transition: all 0.18s; display: flex; align-items: center; gap: 12px;
+      }
+      .px-chain:hover { background: var(--bg-hover); border-color: var(--border-hover); transform: translateY(-2px); }
+      .px-chain-icon {
+        width: 38px; height: 38px; border-radius: 10px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 20px; flex-shrink: 0;
+        background: rgba(255,255,255,0.05);
+      }
+      .px-chain-info { min-width: 0; }
+      .px-chain-name { font-size: 13px; font-weight: 500; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      .px-chain-meta { display: flex; align-items: center; gap: 5px; margin-top: 5px; flex-wrap: wrap; }
+      .px-chain-denom { font-size: 11px; color: var(--text-muted); }
+      .badge {
+        font-size: 9px; padding: 2px 6px; border-radius: 4px;
+        font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase;
+      }
+      .badge-cosmos  { background: rgba(99,102,241,0.14); color: #818cf8; }
+      .badge-evm     { background: rgba(168,85,247,0.14); color: #c084fc; }
+      .badge-mainnet { background: rgba(34,197,94,0.12); color: #4ade80; }
+      .badge-testnet { background: rgba(245,158,11,0.14); color: #fbbf24; }
+
+      /* ── Footer ── */
+      .px-footer {
+        text-align: center; padding: 1.5rem 2rem;
+        border-top: 1px solid var(--border);
+        color: #334155; font-size: 12px;
+      }
+
+      /* ── Responsive ── */
+      @media (max-width: 768px) {
+        .px-hero h1 { font-size: 2rem; }
+        .px-stats-grid { grid-template-columns: repeat(2, 1fr); }
+        .px-nav-links { display: none; }
+        .px-chains { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 480px) {
+        .px-stats-grid { grid-template-columns: 1fr 1fr; }
+        .px-chains { grid-template-columns: 1fr; }
+        .px-nav { padding: 0 1rem; }
+        .px-section { padding: 0 1rem 2rem; }
+        .px-stats-grid { padding: 0 1rem 2rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Loading screen -->
+    <div id="app">
+      <div id="loading-bg">
+        <div class="loading-logo">
+          <div class="loading-logo-mark">P3</div>
+          <div class="loading-logo-text">pilex<span>3173</span> explorer</div>
+        </div>
+        <div class="pre-loading">
+          <div class="effect-1 effects"></div>
+          <div class="effect-2 effects"></div>
+          <div class="effect-3 effects"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main app shell — rendered by Vue after load -->
+    <script type="module" src="/src/main.ts"></script>
+
+    <!-- Override default Ping Dashboard branding after Vue mounts -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Inject custom top navbar once the Vue app mounts
+        const observer = new MutationObserver(function(mutations, obs) {
+          const appRoot = document.querySelector('#app > div:not(#loading-bg)');
+          if (appRoot) {
+            injectCustomUI();
+            obs.disconnect();
+          }
+        });
+        observer.observe(document.getElementById('app'), { childList: true, subtree: true });
+
+        function injectCustomUI() {
+          // Update page title
+          document.title = 'pilex3173 Explorer';
+
+          // Update meta description
+          const metaDesc = document.querySelector('meta[name="description"]');
+          if (metaDesc) metaDesc.setAttribute('content', 'pilex3173 Explorer — Multi-chain block explorer & web wallet for Cosmos SDK, EVM mainnets and testnets.');
+
+          console.log('[pilex3173 Explorer] Custom branding applied.');
+        }
+      });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SSBKVF3GMX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+      });
+      gtag('config', 'G-SSBKVF3GMX');
+    </script>
+
+    <!-- Ping Dashboard Web Widget -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ping-pub/widget@latest/dist/widget.min.js"></script>
+  </body>
+</html>
