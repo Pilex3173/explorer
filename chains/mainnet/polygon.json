@@ -9,6 +9,7 @@
   "min_tx_fee": "21000",
   "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/matic-purple.svg",
   "theme_color": "#8247E5",
+  "explorer_url": "https://polygonscan.com",
   "api": [
     {"address": "https://polygon-rpc.com", "provider": "Polygon"},
     {"address": "https://rpc.ankr.com/polygon", "provider": "Ankr"}
@@ -27,9 +28,7 @@
       "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/_non-cosmos/polygon/images/matic-purple.svg"
     }
   ],
-  "fees": {
-    "fee_tokens": [{"denom": "wei"}]
-  },
+  "fees": {"fee_tokens": [{"denom": "wei"}]},
   "keplr_features": [],
   "features": ["dashboard", "blocks", "tx"]
 }
