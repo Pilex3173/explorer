@@ -2,18 +2,18 @@
     "chain_name": "jay-mainnet",
     "api": [
         "https://api-jayn.winnode.xyz",
-        "https://api-jayn.winnode.xyz"
+        "http://152.53.195.5:1317"
     ],
     "rpc": [
-        "https://api-jayn.winnode.xyz",
-        "https://api-jayn.winnode.xyz"
+        "http://152.53.195.5:26657",
+        "http://152.53.195.105:26657"
     ],
     "coingecko": "",
     "snapshot_provider": "",
-    "sdk_version": "0.50.9",
+    "sdk_version": "0.53.6",
     "coin_type": "118",
     "min_tx_fee": "0",
-    "addr_prefix": "jay",
+    "addr_prefix": "yjay",
     "logo": "https://raw.githubusercontent.com/bbtccore/thejaynetwork/refs/heads/master/chain-registry/thejaynetwork/logo.png",
     "assets": [{
         "base": "ujay",
