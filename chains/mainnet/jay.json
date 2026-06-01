@@ -1,0 +1,25 @@
+{
+    "chain_name": "jay-mainnet",
+    "api": [
+        "https://api-jayn.winnode.xyz",
+        "https://api-jayn.winnode.xyz"
+    ],
+    "rpc": [
+        "https://api-jayn.winnode.xyz",
+        "https://api-jayn.winnode.xyz"
+    ],
+    "coingecko": "",
+    "snapshot_provider": "",
+    "sdk_version": "0.50.9",
+    "coin_type": "118",
+    "min_tx_fee": "0",
+    "addr_prefix": "jay",
+    "logo": "https://raw.githubusercontent.com/bbtccore/thejaynetwork/refs/heads/master/chain-registry/thejaynetwork/logo.png",
+    "assets": [{
+        "base": "ujay",
+        "symbol": "JAY",
+        "exponent": "6",
+        "coingecko_id": "",
+        "logo": "https://raw.githubusercontent.com/bbtccore/thejaynetwork/refs/heads/master/chain-registry/thejaynetwork/logo.png"
+    }]
+}
