@@ -14,12 +14,12 @@
     "coin_type": "118",
     "min_tx_fee": "0",
     "addr_prefix": "addr_safro",
-    "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png",
+    "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/safrochain.png",
     "assets": [{
         "base": "usaf",
         "symbol": "SAF",
         "exponent": "6",
         "coingecko_id": "",
-        "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/osmosis/images/osmo.png"
+        "logo": "https://raw.githubusercontent.com/maouamnodelab/logos/refs/heads/main/safrochain.png"
     }]
 }
